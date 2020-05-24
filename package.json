@@ -8,7 +8,21 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
-  }
+    "discord.js": "^11.1.0",
+    "discord.js-redis": "github:spec-tacles/discord.js-redis",
+    "request": "2.81.0",
+    "ytdl-core": "^2.1.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jens-Hermans/kirito_bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jens-Hermans/kirito_bot/issues"
+  },
+  "homepage": "https://github.com/Jens-Hermans/kirito_bot#readme"
 }

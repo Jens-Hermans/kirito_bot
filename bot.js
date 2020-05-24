@@ -1,11 +1,13 @@
 const Discord = require("discord.js");
 const { prefix, token } = require("./config.json");
 const ytdl = require("ytdl-core");
-
+const { RedisClient } = require('discord.js-redis');
 const client = new Discord.Client();
-
+const client = new Client();
+const redis = new RedisClient(client, {});
 const queue = new Map();
-
+redis.on('ready', () => console.log('Redis ready!'));
+client.on('ready', () => console.log('Discord ready!'));
 client.once("ready", () => {
     console.log("Ready!");
 });
@@ -126,4 +128,4 @@ function play(guild, song) {
     serverQueue.textChannel.send(`Start playing: **${song.title}**`);
 }
 
-client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
+client.login("NzEzODQ2OTAxNjEwNjQzNDU2.XsqnhA.YAtHbQ1WaNUBSjv0O_bMHrLctMw");//BOT_TOKEN is the Client Secret
